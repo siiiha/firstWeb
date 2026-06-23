@@ -118,10 +118,10 @@ input, textarea {
 
 /* 인트로 이미지 */
 .creature-img {
-    width: 300px;          /* 이미지 가로 크기 적당하게 조절 */
+    width: 300px;         
     height: 300px;
     object-fit: cover;     /* 비율 유지 */
-    margin: 0 auto 30px auto; /* 중앙 정렬 및 아래 타이틀과의 간격 */
+    margin: 0 auto 30px auto; /* 중앙 정렬, 아래 타이틀과의 간격 */
     border: 3px solid #2d3540; 
     
     /* 필터 효과 */
@@ -289,7 +289,7 @@ input, textarea {
     margin-right: 5px;
 }
 
-/* 하단 가로 풀(Full) 슬라이더 영역 */
+/* 하단 가로 슬라이더 영역 */
 .evidence-slider-zone {
     width: 100%;
     background: #111318;
@@ -306,11 +306,11 @@ input, textarea {
     letter-spacing: 1px;
 }
 
-/* 이미지들을 감싸고 넘치면 스크롤바를 만들어주는 핵심 상자 */
+/* 이미지*/
 .slider-wrapper {
     display: flex;
     gap: 20px;
-    overflow-x: auto; /* 가로 크기 넘치면 스크롤 생성 */
+    overflow-x: auto; /* 스크롤 생성 */
     padding-bottom: 15px;
     
     /* 스크롤바 커스텀 */
@@ -318,7 +318,6 @@ input, textarea {
     scrollbar-color: #d40000 #161a21;
 }
 
-/* 크롬/사파리 스크롤바 디자인 */
 .slider-wrapper::-webkit-scrollbar {
     height: 6px;
 }
@@ -331,11 +330,11 @@ input, textarea {
     border-radius: 4px;
 }
 
-/* 슬라이더 안의 이미지들 스타일링 */
+/* 슬라이더 이미지 */
 .evidence-img {
-    flex: 0 0 auto;        /* 크기가 줄어들지 않고 원본 비율 유지 */
-    width: 450px;          /* 캡처본이 잘 읽히도록 가로 길이를 넓게 지정 */
-    height: auto;          /* 가로 폭에 맞춰 세로는 자동 조절 */
+    flex: 0 0 auto;        /* 원본 비율 유지 */
+    width: 450px;         
+    height: auto;          /* 자동 조절 */
     object-fit: contain;
     border: 1px solid #2d3540;
     border-radius: 4px;
@@ -367,7 +366,7 @@ input, textarea {
 .section-report {
     max-width: 600px;
     margin: 0 auto;
-}
+} 
 
 .section-report h2 {
     text-align: center;
@@ -436,7 +435,7 @@ input, textarea {
     transition: all 0.2s ease;
 }
 
-/* 푸터 */
+/* 푸~터~ */
 .footer {
     text-align: center;
     padding: 50px 0;
