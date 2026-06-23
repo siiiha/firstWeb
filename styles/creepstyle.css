@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap');
+
+/* 공통 css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 스크롤 느낌 */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    color: #e2e8f0;
+    background: #0b0c10;
+    line-height: 1.6;
+}
+
+/* 리스트 기본 점/숫자 여백 초기화 */
+ul, ol, li { 
+    list-style: none; 
+}
+
+/* 링크 밑줄 제거, 글씨 색은 부모와 동일 */
+a { 
+    text-decoration: none;
+    color: inherit; 
+}
+
+/* 이미지는 부모의 폭을 넘지 않도록 */
+img { 
+    max-width: 100%; 
+    display: block; 
+}
+
+input, textarea {
+    outline: none;
+}
+
+/* ------- */
+
+/* 본문이 양 옆으로 퍼지지 않도록 */
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 상단 헤더 */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #1f2833;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ff1a1a;
+    text-shadow: 0 0 10px #d40000;
+}
+
+/* 헤더 메뉴 가로 정렬 */
+.header nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.header nav a {
+    color: #ffffff;
+}
+
+.header nav a:hover {
+    color: #ff1a1a;
+    text-shadow: 0 0 8px #d40000;
+    transition: all 0.3s ease;
+}
+
+/* MAIN */
+
+/* 본문 전체 섹션 여백 */
+.main section {
+    padding: 80px 0;
+    border-bottom: 1px solid #1f2833;
+}
+
+.intro {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.warning-text {
+    font-size: 1.1rem;
+    color: #ff1a1a;
+    font-weight: bold;
+}
+
+.features h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+/* 인트로 이미지 */
+.creature-img {
+    width: 300px;          /* 이미지 가로 크기 적당하게 조절 */
+    height: 300px;
+    object-fit: cover;     /* 비율 유지 */
+    margin: 0 auto 30px auto; /* 중앙 정렬 및 아래 타이틀과의 간격 */
+    border: 3px solid #2d3540; 
+    
+    /* 필터 효과 */
+    filter: grayscale(40%) contrast(120%); 
+    box-shadow: 0 0 20px rgba(212, 0, 0, 0.15);
+    transition: all 0.5s ease;
+}
+
+/* 호버 효과 */
+.creature-img:hover {
+    filter: grayscale(0%) contrast(140%) saturate(120%);
+    border-color: #d40000;
+    box-shadow: 0 0 30px rgba(212, 0, 0, 0.6);
+}
+
+/* 카드 '부모' 상자: 카드들을 가로로 나열 */
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+/* 개별 카드 디자인 */
+.card {
+    flex: 1;
+    background-color: #111318;
+    padding: 18px 30px 30px;
+    border-radius: 8px;
+    border: 1px solid #2d3540;
+    transition: all 0.3s ease;
+}
+
+.card-num {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff1a1a;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #cbd5e1;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #d40000;
+    box-shadow: 0 10px 25px rgba(212, 0, 0, 0.35);
+    background-color: #140505;
+}
+
+/* 대처 및 기록 섹션 좌우 분할 */
+.section-split {
+    display: flex;
+    gap: 40px; 
+}
+
+.split-box, .record-zone {
+    flex: 1;
+    background: #111318;
+    padding: 20px 30px;
+    border-radius: 8px;
+    border: 1px solid #2d3540;
+    border-left: 4px solid #d40000;
+}   /* 옆에 선 */
+
+.split-box h2, .record-zone h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+.split-box span {
+    color: #ffffff;
+    background: #d40000;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* 가독성을 위해 리스트 마커 복구 스타일링 */
+.split-box ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-bottom: 10px;
+    color: #cbd5e1;
+}
+
+.record-zone ol li {
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin-bottom: 10px;
+    color: #cbd5e1;
+}
+
+.date {
+    color: #ff1a1a;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+/* 덧글기록 */
+
+/* 상단 2박스 / 하단 긴 슬라이더 */
+.records-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* 상단 박스들과 하단 슬라이더 사이의 간격 */
+}
+
+/* 상단 좌우 분할 */
+.section-split {
+    display: flex;
+    gap: 40px; 
+}
+
+.split-box {
+    flex: 1;
+    background: #111318;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #2d3540;
+    border-left: 4px solid #d40000;
+}
+
+.split-box h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+/* 리스트 스타일 */
+.split-box ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-bottom: 10px;
+    color: #cbd5e1;
+}
+
+.split-box ol li {
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin-bottom: 10px;
+    color: #cbd5e1;
+}
+
+.code-blur {
+    color: #ffffff;
+    background: #d40000;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.deleted-data {
+    color: #ffffff;
+    background: #d40000;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+/* 하단 가로 풀(Full) 슬라이더 영역 */
+.evidence-slider-zone {
+    width: 100%;
+    background: #111318;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #2d3540;
+}
+
+.gallery-title {
+    font-size: 0.8rem;
+    color: #ff1a1a;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* 이미지들을 감싸고 넘치면 스크롤바를 만들어주는 핵심 상자 */
+.slider-wrapper {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* 가로 크기 넘치면 스크롤 생성 */
+    padding-bottom: 15px;
+    
+    /* 스크롤바 커스텀 */
+    scrollbar-width: thin;
+    scrollbar-color: #d40000 #161a21;
+}
+
+/* 크롬/사파리 스크롤바 디자인 */
+.slider-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+.slider-wrapper::-webkit-scrollbar-track {
+    background: #161a21;
+    border-radius: 4px;
+}
+.slider-wrapper::-webkit-scrollbar-thumb {
+    background: #d40000;
+    border-radius: 4px;
+}
+
+/* 슬라이더 안의 이미지들 스타일링 */
+.evidence-img {
+    flex: 0 0 auto;        /* 크기가 줄어들지 않고 원본 비율 유지 */
+    width: 450px;          /* 캡처본이 잘 읽히도록 가로 길이를 넓게 지정 */
+    height: auto;          /* 가로 폭에 맞춰 세로는 자동 조절 */
+    object-fit: contain;
+    border: 1px solid #2d3540;
+    border-radius: 4px;
+    filter: grayscale(60%) contrast(120%) brightness(80%);
+    transition: all 0.3s ease;
+}
+
+/* 호버효과 (밝아짐) */
+.evidence-img:hover {
+    filter: grayscale(0%) contrast(100%) brightness(100%);
+    border-color: #ff1a1a;
+    box-shadow: 0 0 20px rgba(212, 0, 0, 0.4);
+}
+
+/* 반응형 모바일 */
+@media (max-width: 768px) {
+    .section-split {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .evidence-img {
+        width: 300px; /* 모바일에선 이미지 크기 약간 축소 */
+    }
+}
+
+/* ---- */
+
+/* 제보 섹션 구역 */
+.section-report {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-report h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.section-report p {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #cbd5e1;
+}
+
+/* 입력 양식 내부 정렬 */
+.report-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* 입력창 기본 디자인 스타일 추가 */
+.form-group input, .form-group textarea {
+    background-color: #111318;
+    border: 1px solid #2d3540;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 4px;
+    font-family: inherit;
+    resize: none; /* 크기변동X */
+}
+
+/* 입력창 선택 시 테두리 빛남 */
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #d40000;
+    box-shadow: 0 0 10px rgba(212, 0, 0, 0.4);
+}
+
+.submit-btn {
+    background-color: #d40000;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: inherit;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #ffffff;
+    color: #0b0c10;
+    box-shadow: 0 0 15px #ffffff;
+    transition: all 0.2s ease;
+}
+
+/* 푸터 */
+.footer {
+    text-align: center;
+    padding: 50px 0;
+    font-size: 0.9rem;
+    border-top: 1px solid #1f2833;
+    color: #94a3b8;
+}
+
+.footer strong {
+    color: #ff1a1a;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #495057;
+}
+
+/* 반응형 모바일 */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+    }
+
+    .cards, .section-split {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .img-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .evidence-img {
+        height: auto; /* 모바일에선 크롭 없이 다 보이게 */
+    }
+}
+
