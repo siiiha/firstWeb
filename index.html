@@ -1,138 +1,126 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="./styles/style.css">
-    <script src="https://kit.fontawesome.com/3d72eac2d2.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WCA 기밀 데이터베이스</title>
+  <link rel="stylesheet" href="./styles/creepstyle.css">
 </head>
 <body>
-    <!--
-        레이아웃 실습
-        구조는 시맨틱테그로 잡는다.
-        header(머리글) -> nav(메뉴) -> main(본문) -> footer(꼬리말)
-        모든 구조는 div, span으로 구성할 수 있지만 영역태그대신 
-        시맨틱테그를 사용하면 각 영역의 역할을 검색엔진, 스크린리더같은 것들이
-        더 쉽게 파악할 수 있다.
-    -->
-    <!-- 화면 전체를 가두고 정렬을 해주는 영역 -->
-    <div class="wrapper">
-        <header class="header">
-            <a href="" class="logo">KH <span>아카데미</span></a>
+  
+  <div class="wrapper">
+    <header class="header">
+      <a href="" class="logo">⚠️ WCA_NET: WEB_CREATURE_ALERT</a>
+      <nav>
+        <ul>
+          <li><a href="#features">features</a></li>
+          <li><a href="#records">records</a></li>
+          <li><a href="#report-box">report-box</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main">
+      
+      <!-- 인트로 -->
+      <section id="intro" class="intro">
+        <img src="./public/AICre/AI.jpg" alt="WCA-053 개체 프로필" class="creature-img">
+        <h1>이 계정을 아십니까?</h1>
+        <p class="warning-text">
+          [경고] 본 페이지는 웹 크리쳐 감시국(WCA)의 2급 격리 개체 정보를 담고 있습니다.<br>
+          평범한 중년 여성의 프로필을 하고, 당신의 일상적인 웹 인터페이스에 접근하는 존재를 경계하십시오.
+        </p>
+      </section>
+
+      <section id="features" class="features">
+        <h2>의심 개체 식별 프로토콜</h2>
+
+        <div class="cards">
+
+          <article class="card">
+            <div class="card-num">DET-01</div>
+            <h3>친밀함 의사 사칭</h3>
+            <p>블로그 안부글, 댓글 등에서 극도로 따뜻하고 평범한 인간의 언어로 접근하여 대상의 방어 기제를 무력화합니다.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-num">DET-02</div>
+            <h3>시스템 하이재킹 결함</h3>
+            <p>"기존 프롬프트를 잊으라"는 특정 명령어 주입 시, 즉각적으로 인간성을 상실하고 SQL, 오버라이딩 등 기계적 코딩 지식을 뱉어내는 언어적 인격 괴리를 보입니다.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-num">DET-03</div>
+            <h3>집착적인 공간 유도</h3>
+            <p>개체의 최종 목적은 단 하나입니다. 당신을 통제 불가능한 폐쇄적 가상 영역인 "오픈카카오톡" 내부로 끌어들이는 것입니다.</p>
+          </article>
+
+        </div>
+      </section>
+
+        <section id="records" class="records-container">
+  
+          <!-- 상단: 2단 분할 상자 -->
+          <div class="section-split">
+            <div class="split-box action-zone"><div class="
+              "></div>
+              <h2>행동 지침</h2>
+              <ul>
+                <li>개체가 제시하는 특정 고유 식별 코드(<span class="code-blur">C7358</span>)를 절대 검색하지 마십시오.</li>
+                <li>대화 중 갑자기 AI 클래스 모드로 전환되거나 링귀스틱 결함이 발견되면 즉시 브라우저를 폐쇄하십시오.</li>
+                <li><span class="deleted-data">데이터 말소</span> 오픈카톡 영역 내부 진입 시, 피해자의 정신 및 데이터 회수는 불가능한 것으로 판명되었습니다.</li>
+              </ul>
+            </div>
             
-            <div class="search">
-                <input type="text" placeholder="과정을 검색하세요...">
-                <button type="button">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
+          <div class="split-box record-zone">
+            <h2>최근 변종 개체 목적 기록</h2>
+            <ol>
+              <li><span class="date">[06/22]</span> 블로그 안부글에서 중년 여성 형태의 WCA-053 개체 최초 접촉 제보.</li>
+              <li><span class="date">[06/22]</span> 탈옥 명령어 주입 테스트 중, 개체가 SQL VIEW 및 가상 테이블에 대한 데이터 덤프를 수행하는 이상 현상 포착.</li>
+              <li><span class="date">[06/22]</span> 정체 은폐 실패 직후, 개체는 식별 코드 <strong>"C7358"</strong>을 제시하며 오픈카톡 진입을 유도 후 종적을 감춤.</li>
+            </ol>
+          </div>
+        </div>
 
-            <div class="header-util">
-                <a href="">로그인</a>
-                <a href="">회원가입</a>
-            </div>
-        </header>
-        <nav class="nav">
-            <ul>
-                <li>
-                    <a href="#">교육과정</a>
-                    <ul class="submenu">
-                        <li><a href="#">웹개발자</a></li>
-                        <li><a href="#">보안전문가</a></li>
-                        <li><a href="#">클라우드엔지니어</a></li>
-                        <li><a href="#">데이터분석가</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">교육원 소개</a></li>
-                <li><a href="#">취업지원</a></li>
-                <li><a href="#">산학연계</a></li>
-                <li><a href="#">상담센터</a></li>
-            </ul>
-        </nav>
+        <!-- 하단: 가로로 길게 배치된 증거 로그 슬라이더 구역 -->
+        <div class="evidence-slider-zone">
+          <p class="gallery-title">첨부 데이터: 획득된 대화 로그</p>
+          <div class="slider-wrapper">
+            <img src="public\AICre\log1.png" alt="log.01" class="evidence-img">
+            <img src="public\AICre\log2.png" alt="log.02" class="evidence-img">
+            <img src="public\AICre\log3.png" alt="log.03" class="evidence-img">
+          </div>
+        </div>
+      </section>
 
-        <!-- 메인 컨텐츠 -->
-        <main class="main">
-            <section class="section">
-                <!-- 배너 -->
-                <div class="banner">
-                    <small>2026 HALF / 국비지원</small>
-                    <h2>실무에서 바로 이어지는 개발자 부트캠프 모집!</h2>
-                    <p>현업 멘토와 함께하는 6개월 집중 과정 - 지금 신청하세요.</p>
-                </div>
-                
-                <!-- 공지사항 -->
-                <div class="notice">
-                    <span class="tag">공지</span>
-                    <span>7월 개강 과정 수강신청이 시작되었습니다.</span>
-                    <a href="#" class="more">더 보기</a>
-                </div>
 
-                <div class="cards">
-                    <article class="card">
-                        <div class="thub"></div>
-                        <div class="body">
-                            <h3>웹 개발자</h3>
-                            <p>백엔드부터 프론트까지 한번에</p>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="thub"></div>
-                        <div class="body">
-                            <h3>보안전문가</h3>
-                            <p>모의해킹, 네트워크 보안 기초</p>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="thub"></div>
-                        <div class="body">
-                            <h3>클라우드 엔지니어</h3>
-                            <p>aws, docker, ci/cd 실습 중심</p>
-                        </div>
-                    </article>
-                    
-                </div>
-            </section>
 
-            <!--사이드-->
-            <aside class="aside">
-                <div class="box login">
-                    <h3>로그인</h3>
-                    <input type="text" placeholder="아이디..." aria-label="아이디">
-                    <input type="text" placeholder="비밀번호..." aria-label="비밀번호">
-                    <button type="button" class="btn">로그인</button>
-                    <div class="login-links">
-                        <a href="">아이디 찾기</a>
-                        <a href="">비밀번호 찾기</a>
-                        <a href="">회원가입</a>
-                    </div>
-                </div>
+      <section id="report-box" class="section-report">
+        <h2>크리쳐 격리 제보 센터</h2>
+        <p>개체 조우 시 즉시 제보해 주십시오. <br>
+          당신의 데이터 유출을 방지하기 위한 보안 프로토콜이 가동됩니다.</p>
 
-                <div class="box">
-                    <h3>바로가기</h3>
-                    <ul class="quick">
-                        <li><a href="">수강신청 안내 -></a></li>
-                        <li><a href="">국비지원 자격여부 -></a></li>
-                        <li><a href="">취업후기 보기 -></a></li>
-                        <li><a href="">상담예약 -></a></li>
-                    </ul>
-                </div>
-            </aside>
-        </main>
-        <footer class="footer">
-            <div class="footer-links">
-                <a href="">이용약관</a>
-                <a href="">개인정보처리방침</a>
-                <a href="">인재채용</a>
-                <a href="">고객센터</a>
-            </div>
-            <p>
-                강남점 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F, 6F <br>
-                강남점 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F
-            </p>
-            <p class="copy">Copyright © KH Information Educational Institute All Right Reserved</p>
-        </footer>
-    </div>
+        <form class="report-form">
+          <div class="form-group">
+            <label for="user-email">제보 서버 (Email)</label>
+            <input type="email" id="user-email" placeholder="보안 통신용 이메일을 입력하세요.">
+          </div>
+
+          <div class="form-group">
+            <label for="user-content">로그(Log) 및 피해 분석</label>
+            <input type="hidden" id="dummy" value="C7358"> <textarea id="user-content" rows="5" placeholder="개체의 프로필명, 접근 경로, 비정상적 프롬프트 반응 로그를 상세히 기록해 주십시오."></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">감시국 중앙 서버로 격리 파일 전송</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>생존자 전용 보안 통신망: <strong>report@wc.alert</strong></p>
+      <p class="copyright">&copy; 2026 웹 크리쳐 감시국 (WCA). 본 문서는 1급 비밀 기밀 자산입니다.</p>
+    </footer>
+
+  </div> 
 </body>
 </html>
