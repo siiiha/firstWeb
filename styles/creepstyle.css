@@ -484,3 +484,126 @@ input, textarea {
     }
 }
 
+/* 팝업 트리거 단어 스타일 */
+.popup-trigger {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.popup-trigger:hover {
+    color: #ff4757;
+}
+
+/* 모달창들이 화면 위에 절대적인 위치로 뜨도록 설정 */
+#popup-container {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
+    z-index: 9999;
+    
+}
+
+/* 모달창 전체 (배경: 어두운 네이비 계열 #1f2833) */
+.mini-modal {
+    position: absolute;
+    width: 320px;
+    height: 140px;
+    background: #140505; 
+    border: 2px solid #ff1a1a; /* 테두리: 밝은 레드 */
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+    pointer-events: auto;
+    box-sizing: border-box;
+}
+
+/* 상단 타이틀바 (배경: 딥 레드 #d40000) */
+.modal-header {
+    background: #d40000;
+    color: #ffffff;
+    font-size: 11px;
+    padding: 5px 8px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ff1a1a;
+}
+
+/* 우측 상단 X 버튼 */
+.modal-close-x {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* 본문 영역 */
+.modal-body {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    flex-grow: 1;
+}
+
+/* 둥근 에러 아이콘 (배경: 밝은 레드 #ff1a1a) */
+.modal-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #ff1a1a;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+/* 에러 텍스트 (글자색: 화이트 #ffffff) */
+.modal-text {
+    font-size: 12px;
+    color: #ffffff;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+/* 하단 버튼 영역 */
+.modal-footer {
+    text-align: right;
+    padding: 0 15px 12px 15px;
+}
+
+/* 확인 버튼 (보더: #ff1a1a, 글자: 화이트) */
+.modal-btn {
+    background: #140505;
+    border: 1px solid #ff1a1a;
+    color: #ffffff;
+    font-size: 11px;
+    padding: 3px 20px;
+    cursor: pointer;
+}
+.modal-btn:hover {
+    background: #ff1a1a;
+    color: #ffffff;
+}
+
+/* 부드럽게 사라지는 애니메이션 등록 */
+@keyframes fadeOut {
+    from {
+        opacity: 1; /* 투명도 100% (선명함) */
+    }
+    to {
+        opacity: 0; /* 투명도 0% (완전 투명) */
+    }
+}
+
+/* 이 클래스가 붙으면 0.5초 동안 위의 애니메이션이 실행됨 */
+.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}

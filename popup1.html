@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>System Error</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0; /* 패딩 제거 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 창 높이에 꽉 채우기 */
+            user-select: none;
+        }
+
+        /* 오류창 전체 박스 */
+        .error-box {
+            background: #fff;
+            border: 1px solid #181818;
+            box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+            width: 100vw;  /* 창 전체 너비 */
+            height: 100vh; /* 창 전체 높이 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* 상단 타이틀바 */
+        .error-header {
+            background: linear-gradient(to right, #ff4757, #ff6b81);
+            color: white;
+            padding: 6px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close-btn {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* 본문 내용 */
+        .error-body {
+            padding: 20px 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* X 표시 아이콘 */
+        .error-icon {
+            background-color: #ff4757;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .error-text {
+            font-size: 13px;
+            color: #333;
+            line-height: 1.4;
+            word-break: keep-all;
+        }
+
+        /* 하단 버튼 영역 */
+        .error-footer {
+            background-color: #f0f0f0;
+            padding: 8px;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .ok-btn {
+            background: #fff;
+            border: 1px solid #7a7a7a;
+            padding: 4px 20px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .ok-btn:active {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="error-box">
+        <div class="error-header">
+            <span>System Warning</span>
+            <span class="close-btn">X</span>
+        </div>
+        <div class="error-body">
+            <div class="error-icon">X</div>
+            <div class="error-text">
+                경고: 치명적인 시스템 오류가 발생했습니다. (Code: C7358)
+            </div>
+        </div>
+        <div class="error-footer">
+            <button class="ok-btn" onclick="window.close()">확인</button>
+        </div>
+    </div>
+
+</body>
+</html>
